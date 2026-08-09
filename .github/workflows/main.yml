@@ -182,7 +182,6 @@ jobs:
           fi
 
       - name: Upload build artifact
-        if: steps.should_publish.outputs.result == 'true'
         uses: actions/upload-artifact@v7
         with:
           name: manager-gradle
