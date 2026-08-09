@@ -159,6 +159,8 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v4
 
+      - run: chmod 755 gradlew
+
       - name: Build with Gradle
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
